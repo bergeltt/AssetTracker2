@@ -20,7 +20,7 @@ class AssetTracker2 {
   void
     begin(void),
     updateGPS(void),
-    gpsRate(uint16_t measurement, int navigation),
+    gpsRate(uint16_t measurementRate, int navigationSol),
     gpsHoldThresh(int speed, uint16_t distance),
     gpsResetODO(void),
     gpsOn(void),

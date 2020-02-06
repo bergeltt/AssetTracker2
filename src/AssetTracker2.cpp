@@ -202,8 +202,8 @@ void AssetTracker2::updateGPS() {
     gps.read();
 }
 
-void AssetTracker2::gpsRate(uint16_t measurement, int navigation) {
-    gps.setRate(measurement, navigation);
+void AssetTracker2::gpsRate(uint16_t measurementRate, int numNavSol) {
+    gps.setRate(measurementRate, numNavSol);
 }
 
 void AssetTracker2::gpsResetODO(void) {
@@ -244,10 +244,10 @@ int AssetTracker2::readXYZmagnitude() {
     return magnitude;
 }
 
-bool AssetTracker2::setupLowPowerWakeMode(uint8_t movementThreshold) {
-	return accel.setupLowPowerWakeMode(movementThreshold);
-}
+// bool AssetTracker2::setupLowPowerWakeMode(uint8_t movementThreshold) {
+// 	return accel.setupLowPowerWakeMode(movementThreshold);
+// }
 
-uint8_t AssetTracker2::clearAccelInterrupt() {
-	return accel.clearInterrupt();
-}
+// uint8_t AssetTracker2::clearAccelInterrupt() {
+// 	return accel.clearInterrupt();
+// }
